@@ -1,0 +1,6 @@
+name: Field Formatter Sample
+description: Some drupal sample field formatters.
+package: Sample
+type: module
+core: 8.x
+

@@ -1,0 +1,3 @@
+services:
+  field_formatter_test.slugifytext:
+    class: Drupal\field_formatter_sample\SlugifyText

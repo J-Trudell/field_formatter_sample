@@ -1,0 +1,14 @@
+{
+    "name": "drupal/field_formatter_sample",
+    "description": "Random Field Formatters",
+    "type": "drupal-module",
+    "require": {
+        "cocur/slugify": "^3.0"
+    },
+    "authors": [
+        {
+            "name": "Jeremy Trudell",
+            "email": "tbudha@gmail.com"
+        }
+    ]
+}

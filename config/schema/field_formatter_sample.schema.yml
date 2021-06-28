@@ -1,0 +1,15 @@
+field.formatter.settings.slugify:
+  type: mapping
+  label: 'Converts text into a slug'
+  mapping:
+    separator:
+      type: string
+      label: 'Text Separator'
+
+field.formatter.settings.tooltip:
+  type: mapping
+  label: 'FFTTooltipFormatter tooltip message'
+  mapping:
+    tooltip_message:
+      type: string
+      label: 'Tooltip message'

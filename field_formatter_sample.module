@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Rot13 encoding.
+ */
+function fft_rot13( $string ) {
+  $string = str_split($string);
+  foreach ($string as $key => $char) {
+    $ord = ord($char);
+    if ($ord >= ord('a') & $ord <= ord('m') || $ord >= ord('A') & $ord <= ord('M')) {
+      $ord += 13;
+    } elseif ($ord >= ord('n') & $ord <= ord('z') || $ord >= ord('N') & $ord <= ord('Z')) {
+      $ord -= 13;
+    }
+    $string[$key] = chr($ord);
+  }
+  return implode($string);
+}
+
+/**
+ * Implements hook_theme.
+ */
+function field_formatter_sample_theme($existing, $type, $theme, $path) {
+  return [
+    'fft_tooltip' => [
+      'variables' => [
+        'text' => NULL,
+        'tooltip' => NULL,
+      ],
+      'template' => 'fft-tooltip',
+    ],
+  ];
+}
+
+/**
+ * Verify qtip2 library is installed.
+ */
+function qtip2_library_exists($library = 'qtip2') {
+  $directory = DRUPAL_ROOT . '/' . 'libraries/' . $library;
+  $js_file = file_exists($directory . '/dist/jquery.qtip.js');
+  $css_file = file_exists($directory . '/dist/jquery.qtip.css');
+  return ($js_file && $css_file);
+}

@@ -1,0 +1,11 @@
+fft-tooltip:
+  js:
+    /libraries/qTip2/dist/jquery.qtip.js: {}
+    js/fft_tooltip.js: {}
+  css:
+    component:
+      /libraries/qTip2/dist/jquery.qtip.css: {}
+    theme:
+      css/fft_tooltip.css: {}
+  dependencies:
+    - core/jquery
